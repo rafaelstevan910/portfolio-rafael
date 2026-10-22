@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Saya | Rafael Stevan Witjaksono</title>
-  <meta name="description" content="Portofolio resmi Rafael Stevan Witjaksono - Menampilkan profil, minat, karya kreatif, dan cara terhubung.">
+  <title>Portofolio Saya | RAFAEL STEVAN WITJAKSONO</title>
+  <meta name="description" content="Portofolio resmi RAFAEL STEVAN WITJAKSONO - Menampilkan profil, minat, karya kreatif, dan cara terhubung melalui Instagram @rayzzfzxt_ft_morales_12.">
   <link rel="icon" href="assets/images/rafael.jpg" type="image/jpeg">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,7 +31,11 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .active-nav {
+    /* Section scroll offset for fixed glass navbar */
+    section {
+      scroll-margin-top: 5.5rem;
+    }
+    .nav-active-pill {
       background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(45, 212, 191, 0.2));
       color: #0284c7 !important;
       font-weight: 700;
@@ -41,38 +45,38 @@
 </head>
 <body class="text-slate-800 antialiased flex flex-col min-h-screen">
 
-  <!-- ================= TOP NAVIGATION (GLASS) ================= -->
-  <header class="fixed top-4 left-0 right-0 z-50 px-4 sm:px-8 max-w-6xl mx-auto">
-    <nav class="glass-nav rounded-full px-5 py-3 flex items-center justify-between">
-      <!-- Logo / Identity -->
-      <a href="index.html" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-brand-toska shadow-sm group-hover:scale-105 transition-transform">
+  <!-- ================= TOP NAVIGATION (FLOATING GLASS NAVBAR) ================= -->
+  <header class="fixed top-4 left-0 right-0 z-50 px-4 sm:px-8 max-w-5xl mx-auto">
+    <nav class="glass-nav rounded-full px-5 py-3 flex items-center justify-between shadow-lg">
+      <!-- Identity Logo -->
+      <a href="#beranda" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-brand-toska shadow-sm group-hover:scale-105 transition-transform flex-shrink-0">
           <img src="assets/images/rafael.jpg" alt="Rafael Stevan Witjaksono" class="w-full h-full object-cover">
         </div>
         <div class="flex flex-col">
-          <span class="font-heading font-bold text-slate-800 text-base tracking-tight group-hover:text-brand-blue transition-colors">Portofolio Saya</span>
-          <span class="text-xs text-slate-500 font-medium">Rafael S. Witjaksono</span>
+          <span class="font-heading font-bold text-slate-800 text-sm sm:text-base tracking-tight group-hover:text-brand-blue transition-colors">Portofolio Saya</span>
+          <span class="text-[11px] text-slate-500 font-medium hidden sm:inline">RAFAEL STEVAN WITJAKSONO</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Items -->
-      <div class="hidden md:flex items-center gap-2">
-        <a href="index.html" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-brand-blue hover:bg-white/60 transition-all">
-          Halaman Utama
+      <!-- Desktop Smooth Anchor Navigation -->
+      <div class="hidden md:flex items-center gap-1.5 bg-white/40 p-1 rounded-full border border-white/60">
+        <a href="#beranda" class="nav-item px-4 py-1.5 rounded-full text-xs font-semibold text-slate-700 hover:text-brand-blue hover:bg-white/80 transition-all">
+          Portofolio Saya
         </a>
-        <a href="profil.html" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-brand-blue hover:bg-white/60 transition-all">
+        <a href="#profil" class="nav-item px-4 py-1.5 rounded-full text-xs font-semibold text-slate-700 hover:text-brand-blue hover:bg-white/80 transition-all">
           Profil Saya
         </a>
-        <a href="kontak.html" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-brand-blue hover:bg-white/60 transition-all">
-          Kontak
+        <a href="#kontak" class="nav-item px-4 py-1.5 rounded-full text-xs font-semibold text-slate-700 hover:text-brand-blue hover:bg-white/80 transition-all">
+          Hubungi Kontak Ini
         </a>
       </div>
 
       <!-- Action Button -->
       <div class="hidden md:flex items-center gap-3">
-        <a href="kontak.html" class="btn-glass-primary !py-2 !px-5 text-sm">
+        <a href="#kontak" class="btn-glass-primary !py-2 !px-4 text-xs">
           <span>Hubungi Kontak Ini</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
           </svg>
         </a>
@@ -87,407 +91,651 @@
     </nav>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobileMenu" class="hidden md:hidden mt-2 glass-card p-4 rounded-2xl flex flex-col gap-2">
-      <a href="index.html" class="nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
-        🏠 Halaman Utama
+    <div id="mobileMenu" class="hidden md:hidden mt-2 glass-card p-4 rounded-2xl flex flex-col gap-2 shadow-xl">
+      <a href="#beranda" class="mobile-nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
+        🏠 Portofolio Saya
       </a>
-      <a href="profil.html" class="nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
-        👤 Profil Saya
+      <a href="#profil" class="mobile-nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
+        👤 Profil RAFAEL STEVAN WITJAKSONO
       </a>
-      <a href="kontak.html" class="nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
-        ✉️ Kontak
+      <a href="#kontak" class="mobile-nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
+        ✉️ Hubungi Kontak Ini
       </a>
       <div class="pt-2 border-t border-slate-200/50">
-        <a href="kontak.html" class="btn-glass-primary w-full text-center justify-center text-sm">
+        <a href="#kontak" class="mobile-nav-link btn-glass-primary w-full text-center justify-center text-xs">
           Hubungi Kontak Ini
         </a>
       </div>
     </div>
   </header>
 
-  <!-- ================= HERO SECTION ================= -->
-  <main class="flex-grow pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full">
-    
-    <!-- Hero Banner Grid -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center py-6 sm:py-12">
+  <!-- ================= MAIN UNIFIED CONTENT ================= -->
+  <main class="flex-grow pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full space-y-20">
+
+    <!-- ================= 1. HALAMAN UTAMA: PORTOFOLIO SAYA ================= -->
+    <section id="beranda" class="pt-6">
       
-      <!-- Text & Intro Column -->
-      <div class="lg:col-span-7 flex flex-col items-start gap-5">
+      <!-- Hero Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        <!-- Neon Pills Badge Group -->
-        <div class="flex flex-wrap items-center gap-2">
-          <span class="neon-pill animate-pulse-glow">
-            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-            Terbuka untuk Kolaborasi & Relasi
-          </span>
-          <span class="neon-pill-blue neon-pill">
-            🚀 Portofolio Resmi
-          </span>
-          <span class="neon-pill-toska neon-pill">
-            💡 Kreatif & Berdedikasi
-          </span>
-        </div>
+        <!-- Intro Column -->
+        <div class="lg:col-span-7 flex flex-col items-start gap-4">
+          
+          <!-- Neon Pills Badge Group -->
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="neon-pill animate-pulse-glow">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              Aktif & Terbuka untuk Kolaborasi
+            </span>
+            <span class="neon-pill-blue neon-pill">
+              💡 Tech & Kreatif
+            </span>
+            <span class="neon-pill-toska neon-pill">
+              🚀 Satu Halaman Ringkas
+            </span>
+          </div>
 
-        <!-- Main Title / Requirement: "Berjudul Dan Bertuliskan Portofolio Saya" -->
-        <div class="space-y-2">
-          <p class="text-brand-blue font-semibold text-sm sm:text-base tracking-wider uppercase">
-            Selamat Datang di
+          <!-- Main Title Requirement: "Berjudul Dan Bertuliskan Portofolio Saya" -->
+          <div class="space-y-1">
+            <p class="text-brand-blue font-bold text-xs sm:text-sm tracking-widest uppercase">
+              Selamat Datang di
+            </p>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Portofolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-teal-500 to-emerald-500">Saya</span>
+            </h1>
+          </div>
+
+          <!-- Engaging Semi-Formal Tone -->
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Halo! Saya <strong class="text-slate-900 font-bold">RAFAEL STEVAN WITJAKSONO</strong>. 
+            Halaman ini merangkum seluruh identitas, minat, serta jalur komunikasi saya dalam satu tempat yang ringkas, bersih, dan nyaman dibaca.
           </p>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Portofolio <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-teal-500 to-emerald-500">Saya</span>
-          </h1>
+
+          <!-- Quick Stats Pill Cards -->
+          <div class="grid grid-cols-3 gap-2.5 w-full py-1">
+            <div class="glass-card p-3 text-center">
+              <div class="text-lg sm:text-xl font-extrabold text-brand-blue">100%</div>
+              <div class="text-[11px] text-slate-500 font-medium">Dedikasi</div>
+            </div>
+            <div class="glass-card p-3 text-center">
+              <div class="text-lg sm:text-xl font-extrabold text-teal-600">Terbuka</div>
+              <div class="text-[11px] text-slate-500 font-medium">Relasi Baru</div>
+            </div>
+            <div class="glass-card p-3 text-center">
+              <div class="text-lg sm:text-xl font-extrabold text-emerald-600">Fast</div>
+              <div class="text-[11px] text-slate-500 font-medium">Respon Instagram</div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons with Glass Effect -->
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <a href="#profil" class="btn-glass-primary !py-2.5 !px-5 text-xs sm:text-sm">
+              <span>Profil RAFAEL</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <a href="#kontak" class="btn-glass-secondary !py-2.5 !px-5 text-xs sm:text-sm">
+              <span>Hubungi Kontak Ini</span>
+              <svg class="w-4 h-4 text-brand-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+              </svg>
+            </a>
+          </div>
+
         </div>
 
-        <!-- Semi-Formal Engaging Introduction -->
-        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-          Halo dan salam hangat! Saya <strong class="text-slate-800 font-bold">RAFAEL STEVAN WITJAKSONO</strong>. 
-          Website ini dirancang sebagai ruang representasi diri, dokumentasi potensi, dan wadah untuk berbagi semangat dalam dunia teknologi serta kreativitas. 
-          Jelajahi setiap sudut halaman untuk mengenal saya lebih dekat!
-        </p>
+        <!-- Photo & Vector Illustration Column -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+          <!-- Ambient Glow Blobs -->
+          <div class="absolute -top-6 -left-6 w-40 h-40 bg-sky-200/50 rounded-full blur-3xl -z-10 animate-pulse"></div>
+          <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-teal-200/50 rounded-full blur-3xl -z-10"></div>
+          
+          <div class="relative photo-aura w-full max-w-xs sm:max-w-sm">
+            <!-- Glass Picture Frame with User Photo -->
+            <div class="glass-card overflow-hidden p-2.5 rounded-3xl border-2 border-white/90 shadow-xl bg-white/70">
+              <div class="relative overflow-hidden rounded-2xl aspect-[3/4]">
+                <img 
+                  src="assets/images/rafael.jpg" 
+                  alt="Foto Utama Rafael Stevan Witjaksono" 
+                  class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                >
+                <!-- Bottom Glass Name Ribbon -->
+                <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent text-white">
+                  <span class="inline-block bg-teal-500/90 backdrop-blur-md text-[10px] font-bold px-2 py-0.5 rounded-full mb-0.5">
+                    Portofolio Saya
+                  </span>
+                  <p class="text-xs sm:text-sm font-bold">RAFAEL STEVAN WITJAKSONO</p>
+                </div>
+              </div>
+            </div>
 
-        <!-- Quick Stats Cards with Glass Effect -->
-        <div class="grid grid-cols-3 gap-3 w-full py-2">
-          <div class="glass-card p-3 sm:p-4 text-center">
-            <div class="text-xl sm:text-2xl font-extrabold text-brand-blue">100%</div>
-            <div class="text-xs text-slate-500 font-medium mt-0.5">Semangat Berkarya</div>
-          </div>
-          <div class="glass-card p-3 sm:p-4 text-center">
-            <div class="text-xl sm:text-2xl font-extrabold text-teal-600">Terbuka</div>
-            <div class="text-xs text-slate-500 font-medium mt-0.5">Peluang Baru</div>
-          </div>
-          <div class="glass-card p-3 sm:p-4 text-center">
-            <div class="text-xl sm:text-2xl font-extrabold text-emerald-600">Aktif</div>
-            <div class="text-xs text-slate-500 font-medium mt-0.5">Media Sosial</div>
-          </div>
-        </div>
+            <!-- Floating Glass Badge: Tech Vector Illustration -->
+            <div class="absolute -top-3 -right-3 glass-card p-2.5 rounded-xl shadow-md border border-white flex items-center gap-2 animate-float">
+              <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center text-white shadow">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-[11px] font-bold text-slate-800">Inovatif</p>
+                <p class="text-[9px] text-teal-600 font-medium">Kreatif & Fokus</p>
+              </div>
+            </div>
 
-        <!-- CTA Buttons with Glass Effect -->
-        <div class="flex flex-wrap items-center gap-4 pt-2">
-          <a href="profil.html" class="btn-glass-primary">
-            <span>Lihat Profil Lengkap</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-            </svg>
-          </a>
-          <a href="kontak.html" class="btn-glass-secondary">
-            <span>Hubungi Kontak Ini</span>
-            <svg class="w-5 h-5 text-brand-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-            </svg>
-          </a>
+            <!-- Floating Glass Badge: Instagram Badge -->
+            <div class="absolute -bottom-3 -left-3 glass-card p-2.5 rounded-xl shadow-md border border-white flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-gradient-to-tr from-teal-400 to-emerald-400 flex items-center justify-center text-white shadow">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-[11px] font-bold text-slate-800">Instagram Aktif</p>
+                <p class="text-[9px] text-slate-500">@rayzzfzxt_ft_morales_12</p>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
 
-      <!-- Photo & Creative Illustration Column -->
-      <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+      <!-- Interactive Glass Carousel / Slider in Section Utama -->
+      <div class="mt-12">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <span class="neon-pill-blue neon-pill text-xs">Slide Interaktif Kaca</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">Sorotan & Gagasan Utama</h2>
+          </div>
+          <!-- Slider Navigation Buttons -->
+          <div class="flex items-center gap-2">
+            <button id="prevSlide" class="slider-btn !w-9 !h-9 text-xs" aria-label="Slide Sebelumnya">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+            </button>
+            <button id="nextSlide" class="slider-btn !w-9 !h-9 text-xs" aria-label="Slide Selanjutnya">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="slider-container glass-card p-6 sm:p-8 border-2 border-white/90">
+          <div id="sliderTrack" class="slider-track">
+            
+            <!-- Slide 1 -->
+            <div class="slide-item">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <div class="md:col-span-8 space-y-2">
+                  <span class="neon-pill text-xs">Slide 1 • Eksplorasi Digital</span>
+                  <h3 class="text-xl sm:text-2xl font-bold text-slate-900">
+                    Kombinasi Teknologi Modern & Antarmuka Estetis
+                  </h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Setiap karya dibangun dengan perhatian penuh terhadap keselarasan visual, tema *light theme* yang segar, serta kemudahan navigasi bagi semua pembaca.
+                  </p>
+                </div>
+                <div class="md:col-span-4 flex justify-center">
+                  <div class="p-4 rounded-xl bg-gradient-to-br from-sky-50 to-teal-50 border border-sky-100 text-center w-full">
+                    <span class="text-2xl">✨</span>
+                    <p class="text-xs font-bold text-slate-800 mt-1">Estetika & Fungsional</p>
+                    <p class="text-[10px] text-slate-500">Sentuhan *Glassmorphism* Bersih</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide-item">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <div class="md:col-span-8 space-y-2">
+                  <span class="neon-pill-toska neon-pill text-xs">Slide 2 • Sikap Belajar</span>
+                  <h3 class="text-xl sm:text-2xl font-bold text-slate-900">
+                    Karakter Positif & Adaptabilitas Cepat
+                  </h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Siap belajar hal baru, menerima setiap masukan secara terbuka, dan menyelesaikan setiap tantangan dengan ketenangan serta solusi terstruktur.
+                  </p>
+                </div>
+                <div class="md:col-span-4 flex justify-center">
+                  <div class="p-4 rounded-xl bg-gradient-to-br from-teal-50 to-emerald-50 border border-teal-100 text-center w-full">
+                    <span class="text-2xl">🌱</span>
+                    <p class="text-xs font-bold text-slate-800 mt-1">Growth Mindset</p>
+                    <p class="text-[10px] text-slate-500">Selalu Ingin Berkembang</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide-item">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <div class="md:col-span-8 space-y-2">
+                  <span class="neon-pill-blue neon-pill text-xs">Slide 3 • Jalinan Komunikasi</span>
+                  <h3 class="text-xl sm:text-2xl font-bold text-slate-900">
+                    Terhubung Melalui Instagram Resmi
+                  </h3>
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Kunjungi akun Instagram <strong class="text-slate-800">@rayzzfzxt_ft_morales_12</strong> untuk bertegur sapa, berdiskusi, maupun menjalin kolaborasi.
+                  </p>
+                </div>
+                <div class="md:col-span-4 flex justify-center">
+                  <div class="p-4 rounded-xl bg-gradient-to-br from-rose-50 to-sky-50 border border-rose-100 text-center w-full">
+                    <span class="text-2xl">📱</span>
+                    <p class="text-xs font-bold text-slate-800 mt-1">Instagram Terbuka</p>
+                    <p class="text-[10px] text-slate-500">DM Aktif Direspon</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="sliderDots" class="flex justify-center items-center gap-1.5 mt-6"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= 2. HALAMAN PROFIL: RAFAEL STEVAN WITJAKSONO ================= -->
+    <section id="profil" class="pt-6">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <div class="inline-flex items-center gap-2 mb-2">
+          <span class="neon-pill text-xs">Biodata & Keahlian</span>
+          <span class="neon-pill-blue neon-pill text-xs">Halaman Profil</span>
+        </div>
+        <!-- Prominent Full Name as requested -->
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          RAFAEL STEVAN WITJAKSONO
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2">
+          Pribadi berdedikasi tinggi dengan ketertarikan mendalam pada dunia teknologi, kreativitas digital, dan relasi yang positif.
+        </p>
+      </div>
+
+      <!-- Two-Column Profile Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         
-        <!-- Decorative Ambient Background Blobs -->
-        <div class="absolute -top-10 -left-10 w-48 h-48 bg-sky-200/50 rounded-full blur-3xl -z-10 animate-pulse"></div>
-        <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-teal-200/50 rounded-full blur-3xl -z-10"></div>
-        
-        <!-- Photo Container with Aura & Glass Badges -->
-        <div class="relative photo-aura w-full max-w-sm sm:max-w-md">
+        <!-- Left: Photo in Profile Section & Quick Bio Facts -->
+        <div class="lg:col-span-5 flex flex-col gap-4">
+          <div class="photo-aura">
+            <div class="glass-card p-3 rounded-2xl border-2 border-white/90 shadow-lg bg-white/80">
+              <div class="relative overflow-hidden rounded-xl aspect-[3/4] shadow">
+                <!-- User's photo on Profile page as required -->
+                <img 
+                  src="assets/images/rafael.jpg" 
+                  alt="Foto Profil RAFAEL STEVAN WITJAKSONO" 
+                  class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                >
+                <div class="absolute top-2.5 right-2.5 bg-white/85 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] font-bold text-slate-800 shadow-sm border border-white flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Terverifikasi
+                </div>
+              </div>
+              <div class="mt-3 text-center">
+                <h3 class="text-base font-bold text-slate-900">RAFAEL STEVAN WITJAKSONO</h3>
+                <p class="text-[11px] text-brand-blue font-semibold">Kreator & Digital Enthusiast</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Bio Facts Card -->
+          <div class="glass-card p-5 rounded-2xl space-y-2 text-xs">
+            <h4 class="font-bold text-slate-800 flex items-center gap-1.5 border-b border-slate-100 pb-2">
+              <span class="w-2 h-2 rounded-full bg-brand-sky"></span>
+              Informasi Singkat
+            </h4>
+            <div class="flex justify-between py-1 border-b border-slate-100">
+              <span class="text-slate-500">Nama Lengkap</span>
+              <span class="font-semibold text-slate-800">Rafael Stevan Witjaksono</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-slate-100">
+              <span class="text-slate-500">Panggilan</span>
+              <span class="font-semibold text-slate-800">Rafael</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-slate-100">
+              <span class="text-slate-500">Domisili</span>
+              <span class="font-semibold text-slate-800">Indonesia</span>
+            </div>
+            <div class="flex justify-between py-1">
+              <span class="text-slate-500">Instagram</span>
+              <a href="https://instagram.com/rayzzfzxt_ft_morales_12" target="_blank" class="font-semibold text-brand-blue hover:underline">
+                @rayzzfzxt_ft_morales_12
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Bio Description, Skills & Values -->
+        <div class="lg:col-span-7 flex flex-col gap-5">
           
-          <!-- Glass Picture Frame -->
-          <div class="glass-card overflow-hidden p-3 rounded-3xl border-2 border-white/90 shadow-2xl bg-white/70">
-            <div class="relative overflow-hidden rounded-2xl aspect-[3/4]">
-              <img 
-                src="assets/images/rafael.jpg" 
-                alt="Foto Profil Rafael Stevan Witjaksono" 
-                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+          <!-- Tentang Saya (Bio semi-formal yang komunikatif) -->
+          <div class="glass-card p-6 rounded-3xl space-y-3">
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand-toska"></span>
+              Tentang Saya
+            </h3>
+            <div class="text-xs sm:text-sm text-slate-600 space-y-2.5 leading-relaxed">
+              <p>
+                Salam kenal! Saya <strong class="text-slate-800 font-bold">Rafael Stevan Witjaksono</strong>. Saya adalah individu yang antusias dalam mempelajari perkembangan teknologi, eksplorasi desain, serta pemecahan masalah secara kreatif.
+              </p>
+              <p>
+                Bagi saya, perpaduan antara dedikasi, konsistensi, dan kemauan untuk terus belajar adalah kunci utama dalam menghasilkan karya yang bermanfaat. Saya selalu senang bertukar gagasan positif dan siap menyambut kolaborasi yang konstruktif.
+              </p>
+            </div>
+          </div>
+
+          <!-- Keahlian & Minat with Neon Pills -->
+          <div class="glass-card p-6 rounded-3xl space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-sky"></span>
+                Keahlian & Minat
+              </h3>
+              <span class="text-[11px] text-teal-600 font-semibold">Kompetensi Utama</span>
+            </div>
+            <p class="text-xs text-slate-500">Bidang ketertarikan dan kemampuan yang terus saya asah:</p>
+            
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="neon-pill text-xs py-1 px-3">💻 Eksplorasi Web & Tech</span>
+              <span class="neon-pill-blue neon-pill text-xs py-1 px-3">🎨 Desain Bersih & Elegan</span>
+              <span class="neon-pill-toska neon-pill text-xs py-1 px-3">⚡ Pemikiran Kritis & Solutif</span>
+              <span class="neon-pill text-xs py-1 px-3">🤝 Kerja Sama Tim & Relasi</span>
+              <span class="neon-pill-blue neon-pill text-xs py-1 px-3">🚀 Cepat Belajar Hal Baru</span>
+              <span class="neon-pill-toska neon-pill text-xs py-1 px-3">📱 Komunikasi Media Sosial</span>
+              <span class="neon-pill text-xs py-1 px-3">🎯 Manajemen Waktu</span>
+            </div>
+          </div>
+
+          <!-- Nilai & Prinsip Kerja -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="glass-card p-4 rounded-2xl">
+              <div class="flex items-center gap-1.5 text-brand-blue font-bold text-xs">
+                <span>✓</span> Integritas & Kejujuran
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">Mengedepankan tanggung jawab penuh pada setiap amanah.</p>
+            </div>
+            <div class="glass-card p-4 rounded-2xl">
+              <div class="flex items-center gap-1.5 text-teal-600 font-bold text-xs">
+                <span>⚡</span> Growth Mindset
+              </div>
+              <p class="text-[11px] text-slate-500 mt-1">Melihat setiap masukan sebagai peluang menjadi lebih baik.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= 3. HALAMAN KONTAK: HUBUNGI KONTAK INI ================= -->
+    <section id="kontak" class="pt-6">
+      
+      <!-- Section Header: "Hubungi kontak ini" -->
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <div class="inline-flex items-center gap-2 mb-2">
+          <span class="neon-pill text-xs">Komunikasi & Kolaborasi</span>
+          <span class="neon-pill-blue neon-pill text-xs">Halaman Kontak</span>
+        </div>
+        <!-- Required Title -->
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Hubungi Kontak Ini
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2">
+          Jangan ragu untuk menyapa atau mendiskusikan peluang kolaborasi melalui akun Instagram resmi maupun formulir di bawah ini.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Left: Featured Instagram Card with User Handle -->
+        <div class="lg:col-span-5 flex flex-col gap-4">
+          
+          <!-- Instagram Highlight Card -->
+          <div class="glass-card p-6 rounded-3xl border-2 border-white relative overflow-hidden group">
+            <div class="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-pink-400 to-sky-400 rounded-full blur-2xl opacity-20 -z-10 group-hover:opacity-35 transition-opacity"></div>
+
+            <div class="flex items-center justify-between mb-3">
+              <span class="neon-pill text-[10px]">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Akun Resmi
+              </span>
+              <span class="text-[10px] font-semibold text-brand-blue bg-sky-50 px-2 py-0.5 rounded-full border border-sky-100">
+                Instagram Utama
+              </span>
+            </div>
+
+            <!-- Instagram Visual & Handle -->
+            <div class="flex items-center gap-3 py-1">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-400 via-rose-500 to-purple-600 p-0.5 shadow-md flex-shrink-0">
+                <div class="w-full h-full bg-white/95 rounded-[14px] flex items-center justify-center">
+                  <svg class="w-7 h-7 text-rose-500" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div>
+                <p class="text-[10px] text-slate-500 font-medium">Username Instagram</p>
+                <!-- Required Instagram Handle -->
+                <p class="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight break-all">
+                  @rayzzfzxt_ft_morales_12
+                </p>
+                <p class="text-[10px] text-emerald-600 font-semibold">● Aktif & Siap Menerima DM</p>
+              </div>
+            </div>
+
+            <!-- Action Buttons with Glass Effect -->
+            <div class="mt-4 flex flex-col sm:flex-row gap-2">
+              <a 
+                href="https://instagram.com/rayzzfzxt_ft_morales_12" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn-glass-primary text-center justify-center !py-2 !px-3 text-xs flex-1"
               >
-              <!-- Glass Gradient Overlay at bottom of image -->
-              <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent text-white">
-                <span class="inline-block bg-teal-500/90 backdrop-blur-md text-xs font-bold px-2.5 py-0.5 rounded-full mb-1">
-                  Foto Resmi
-                </span>
-                <h2 class="text-base sm:text-lg font-bold">RAFAEL STEVAN WITJAKSONO</h2>
-                <p class="text-xs text-slate-200">Kreator & Pribadi Berkarakter</p>
-              </div>
+                <span>Buka Instagram</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+              </a>
+
+              <button 
+                onclick="copyInstagramHandle('rayzzfzxt_ft_morales_12')" 
+                class="btn-glass-secondary justify-center !py-2 !px-3 text-xs flex-1"
+              >
+                <span>Salin Username</span>
+              </button>
             </div>
           </div>
 
-          <!-- Floating Glass Badge 1: Top Right (Creative Illustration Vector) -->
-          <div class="absolute -top-4 -right-4 glass-card p-3 rounded-2xl shadow-lg border border-white flex items-center gap-2.5 animate-float">
-            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center text-white shadow-md">
-              <!-- SVG Illustration: Creative Spark -->
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <div>
-              <p class="text-xs font-bold text-slate-800">Energi Positif</p>
-              <p class="text-[10px] text-teal-600 font-medium">Fokus & Inovatif</p>
-            </div>
-          </div>
-
-          <!-- Floating Glass Badge 2: Bottom Left (Social Vector Illustration) -->
-          <div class="absolute -bottom-4 -left-4 glass-card p-3 rounded-2xl shadow-lg border border-white flex items-center gap-2.5">
-            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-teal-400 to-emerald-400 flex items-center justify-center text-white shadow-md">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
+          <!-- Quick Response Note -->
+          <div class="glass-card p-4 rounded-2xl flex items-center gap-3 text-xs text-slate-600">
+            <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0 font-bold">
+              ⚡
             </div>
             <div>
-              <p class="text-xs font-bold text-slate-800">Instagram Aktif</p>
-              <p class="text-[10px] text-slate-500">@rayzzfzxt_ft_morales_12</p>
+              <p class="font-bold text-slate-800">Respon Ramah</p>
+              <p class="text-[11px] text-slate-500">Pesan Anda akan dibalas dengan santun dan cepat.</p>
             </div>
           </div>
 
         </div>
 
-      </div>
-
-    </section>
-
-    <!-- ================= ILLUSTRATED VECTOR HIGHLIGHT SECTION ================= -->
-    <section class="mt-12 mb-16">
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="neon-pill-toska neon-pill mb-2">Eksplorasi & Keunggulan</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
-          Nilai Utama yang Saya Bangun
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-2">
-          Setiap langkah diisi dengan rasa ingin tahu, semangat belajar hal baru, dan dedikasi untuk selalu memberikan yang terbaik.
-        </p>
-      </div>
-
-      <!-- 3 Glassmorphism Cards with Custom Vector Illustrations -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Card 1 -->
-        <div class="glass-card p-6 flex flex-col items-start gap-4">
-          <!-- Illustration 1: Tech & Modernity -->
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-400/20 to-sky-600/20 border border-sky-300 flex items-center justify-center text-sky-600">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900">Ketertarikan Teknologi</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            Mempelajari perkembangan dunia digital, antarmuka modern yang ramah pengguna, dan bagaimana teknologi mempermudah kehidupan manusia.
-          </p>
-          <span class="neon-pill text-xs mt-auto">Tech Enthusiast</span>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="glass-card p-6 flex flex-col items-start gap-4">
-          <!-- Illustration 2: Creativity & Design -->
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-400/20 to-teal-600/20 border border-teal-300 flex items-center justify-center text-teal-600">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900">Kreativitas & Estetika</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            Menghargai perpaduan warna yang bersih, tata letak seimbang dengan sentuhan kaca (*glassmorphism*), dan gaya visual yang nyaman dipandang.
-          </p>
-          <span class="neon-pill-toska neon-pill text-xs mt-auto">Aesthetic & Clean</span>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="glass-card p-6 flex flex-col items-start gap-4">
-          <!-- Illustration 3: Collaboration & Growth -->
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400/20 to-lime-500/20 border border-emerald-300 flex items-center justify-center text-emerald-600">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900">Komunikasi & Kolaborasi</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            Membangun komunikasi semi-formal yang luwes, saling menghormati pendapat, dan siap bekerjasama dalam tim maupun proyek personal.
-          </p>
-          <span class="neon-pill text-xs mt-auto">Collaborative Mind</span>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ================= INTERACTIVE GLASS SLIDER / SHOWCASE ================= -->
-    <section class="mt-8 mb-16">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-4">
-        <div>
-          <span class="neon-pill-blue neon-pill mb-2">Slide Interaktif Portofolio</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Sorotan Portofolio & Gagasan
-          </h2>
-          <p class="text-slate-600 text-sm mt-1">
-            Klik tombol panah atau navigasikan slide dengan sentuhan glassmorphism yang halus.
-          </p>
-        </div>
-
-        <!-- Slider Controls -->
-        <div class="flex items-center gap-3">
-          <button id="prevSlide" class="slider-btn" aria-label="Slide Sebelumnya">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-            </svg>
-          </button>
-          <button id="nextSlide" class="slider-btn" aria-label="Slide Selanjutnya">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Slider Container with Glass Frame -->
-      <div class="slider-container glass-card p-6 sm:p-10 border-2 border-white/90">
-        <div id="sliderTrack" class="slider-track">
-          
-          <!-- Slide 1 -->
-          <div class="slide-item">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-              <div class="md:col-span-7 space-y-4">
-                <span class="neon-pill">Slide 01 • Eksplorasi Digital</span>
-                <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 leading-snug">
-                  Membangun Solusi Digital dengan Sentuhan Modern & Interaktif
-                </h3>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Bagi saya, website bukan sekadar kumpulan kode, melainkan medium komunikasi visual yang menghubungkan ide kepada audiens secara elegan, jelas, dan memikat.
-                </p>
-                <div class="flex items-center gap-3 pt-2">
-                  <a href="profil.html" class="btn-glass-primary !py-2 !px-4 text-sm">
-                    Pelajari Di Profil
-                  </a>
-                  <span class="text-xs text-slate-500 font-semibold">Desain Bersih & Elegan</span>
-                </div>
-              </div>
-              <div class="md:col-span-5 flex justify-center">
-                <div class="w-full max-w-xs p-6 rounded-2xl bg-gradient-to-br from-sky-100 to-teal-50 border border-sky-200/60 shadow-inner flex flex-col items-center text-center gap-3">
-                  <div class="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center text-sky-500">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-                    </svg>
-                  </div>
-                  <h4 class="font-bold text-slate-800">Fokus Kualitas</h4>
-                  <p class="text-xs text-slate-500">Kombinasi keindahan tampilan dan kemudahan fungsionalitas di setiap karya.</p>
-                </div>
-              </div>
+        <!-- Right: Interactive Glass Contact Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-card p-6 rounded-3xl border-2 border-white shadow-lg space-y-4">
+            
+            <div class="space-y-0.5">
+              <span class="neon-pill-blue neon-pill text-[10px]">Formulir Pesan</span>
+              <h3 class="text-lg font-bold text-slate-900">Tinggalkan Pesan Anda</h3>
+              <p class="text-xs text-slate-500">Kirimkan pertanyaan atau ajakan kolaborasi secara langsung:</p>
             </div>
-          </div>
 
-          <!-- Slide 2 -->
-          <div class="slide-item">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-              <div class="md:col-span-7 space-y-4">
-                <span class="neon-pill-toska neon-pill">Slide 02 • Kepribadian & Minat</span>
-                <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 leading-snug">
-                  Karakter Positif, Terbuka pada Masukan, dan Haus Pembelajaran
-                </h3>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Menghadapi tantangan dengan ketenangan dan selalu mencari perspektif baru. Kemampuan beradaptasi menjadi fondasi saya untuk terus relevan di era cepat berubah.
-                </p>
-                <div class="flex items-center gap-3 pt-2">
-                  <a href="kontak.html" class="btn-glass-primary !py-2 !px-4 text-sm">
-                    Ajak Berdiskusi
-                  </a>
-                  <span class="text-xs text-slate-500 font-semibold">Respon Ramah</span>
-                </div>
+            <form id="contactForm" class="space-y-3 pt-1">
+              <div>
+                <label for="fullName" class="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                  Nama Anda <span class="text-rose-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  required 
+                  placeholder="Nama lengkap Anda"
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-white/80 border border-slate-200 focus:border-brand-sky focus:bg-white focus:outline-none focus:ring-4 focus:ring-sky-100 transition-all text-xs text-slate-800"
+                >
               </div>
-              <div class="md:col-span-5 flex justify-center">
-                <div class="w-full max-w-xs p-6 rounded-2xl bg-gradient-to-br from-teal-50 to-emerald-100 border border-teal-200/60 shadow-inner flex flex-col items-center text-center gap-3">
-                  <div class="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center text-teal-600">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                  </div>
-                  <h4 class="font-bold text-slate-800">Sikap Positif</h4>
-                  <p class="text-xs text-slate-500">Membawa suasana kerja dan kolaborasi yang menyenangkan dan produktif.</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Slide 3 -->
-          <div class="slide-item">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-              <div class="md:col-span-7 space-y-4">
-                <span class="neon-pill-blue neon-pill">Slide 03 • Siap Menghubungkan Ide</span>
-                <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 leading-snug">
-                  Jaringan Komunikasi Terbuka Melalui Media Sosial
-                </h3>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Terhubung secara langsung melalui Instagram <strong class="text-slate-800">@rayzzfzxt_ft_morales_12</strong>. Mari bertukar pikiran dan berbagi inspirasi seputar karya dan kegiatan harian.
-                </p>
-                <div class="flex items-center gap-3 pt-2">
-                  <a href="kontak.html" class="btn-glass-primary !py-2 !px-4 text-sm">
-                    Kunjungi Halaman Kontak
-                  </a>
-                  <button onclick="copyInstagramHandle('rayzzfzxt_ft_morales_12')" class="btn-glass-secondary !py-2 !px-3 text-xs">
-                    Salin Username
-                  </button>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label for="email" class="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                    Email / WhatsApp <span class="text-rose-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    placeholder="email@anda.com / 0812..."
+                    class="w-full px-3.5 py-2.5 rounded-xl bg-white/80 border border-slate-200 focus:border-brand-sky focus:bg-white focus:outline-none focus:ring-4 focus:ring-sky-100 transition-all text-xs text-slate-800"
+                  >
                 </div>
-              </div>
-              <div class="md:col-span-5 flex justify-center">
-                <div class="w-full max-w-xs p-6 rounded-2xl bg-gradient-to-br from-sky-100 to-indigo-50 border border-sky-200/60 shadow-inner flex flex-col items-center text-center gap-3">
-                  <div class="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center text-brand-sky">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                    </svg>
-                  </div>
-                  <h4 class="font-bold text-slate-800">Hubungi Kapan Saja</h4>
-                  <p class="text-xs text-slate-500">Pesan dan ajakan diskusi akan direspon dengan senang hati.</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
+                <div>
+                  <label for="subject" class="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                    Subjek <span class="text-rose-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="subject" 
+                    name="subject" 
+                    required 
+                    placeholder="Topik pesan"
+                    class="w-full px-3.5 py-2.5 rounded-xl bg-white/80 border border-slate-200 focus:border-brand-sky focus:bg-white focus:outline-none focus:ring-4 focus:ring-sky-100 transition-all text-xs text-slate-800"
+                  >
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                  Isi Pesan <span class="text-rose-500">*</span>
+                </label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="3" 
+                  required 
+                  placeholder="Tuliskan pesan Anda di sini secara santai dan jelas..."
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-white/80 border border-slate-200 focus:border-brand-sky focus:bg-white focus:outline-none focus:ring-4 focus:ring-sky-100 transition-all text-xs text-slate-800 resize-none"
+                ></textarea>
+              </div>
+
+              <button 
+                type="submit" 
+                class="btn-glass-primary w-full text-center justify-center !py-2.5 text-xs sm:text-sm shadow-md"
+              >
+                <span>Kirim Pesan Sekarang</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+              </button>
+            </form>
+
+          </div>
         </div>
 
-        <!-- Dots Indicator -->
-        <div id="sliderDots" class="flex justify-center items-center gap-2 mt-8"></div>
       </div>
-    </section>
 
-    <!-- ================= INVITATION CALL TO ACTION ================= -->
-    <section class="glass-card p-8 sm:p-12 text-center rounded-3xl border-2 border-white relative overflow-hidden">
-      <div class="relative z-10 max-w-2xl mx-auto space-y-4">
-        <span class="neon-pill">Langkah Berikutnya</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
-          Tertarik Mengenal Lebih Jauh?
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base">
-          Anda dapat menyimak biografi, keahlian, dan prinsip saya di Halaman Profil, atau langsung menyampaikan pesan di Halaman Kontak.
-        </p>
-        <div class="flex flex-wrap justify-center items-center gap-4 pt-2">
-          <a href="profil.html" class="btn-glass-primary">
-            Kunjungi Profil Saya
-          </a>
-          <a href="kontak.html" class="btn-glass-secondary">
-            Hubungi Kontak Ini
-          </a>
-        </div>
-      </div>
     </section>
 
   </main>
 
+  <!-- ================= POPUP MODAL (PESAN TERKIRIM) ================= -->
+  <div id="successModal" class="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="glass-card !bg-white/95 max-w-sm w-full p-6 rounded-3xl border-2 border-white shadow-2xl text-center space-y-3 animate-float">
+      <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-400 to-teal-500 text-white flex items-center justify-center mx-auto shadow-md">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+
+      <div class="space-y-1">
+        <span class="neon-pill text-[10px]">Sukses</span>
+        <h3 class="text-lg font-bold text-slate-900">Pesan Berhasil Terkirim!</h3>
+        <p class="text-xs text-slate-600">
+          Terima kasih telah menghubungi. Rafael Stevan Witjaksono akan segera merespon pesan Anda.
+        </p>
+      </div>
+
+      <button id="closeModalBtn" class="btn-glass-primary w-full justify-center !py-2 text-xs">
+        Tutup
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast"></div>
+
   <!-- ================= FOOTER ================= -->
-  <footer class="mt-auto border-t border-slate-200/60 bg-white/60 backdrop-blur-md py-8 px-4 text-center">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+  <footer class="mt-auto border-t border-slate-200/60 bg-white/60 backdrop-blur-md py-6 px-4 text-center">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
       <div class="flex items-center gap-2">
-        <span class="w-3 h-3 rounded-full bg-teal-400"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-teal-400"></span>
         <span class="font-bold text-slate-800">RAFAEL STEVAN WITJAKSONO</span>
         <span class="text-slate-400">|</span>
-        <span>Portofolio Resmi</span>
+        <span>Portofolio Saya</span>
       </div>
-      <div class="flex items-center gap-4 text-xs font-semibold">
-        <a href="index.html" class="hover:text-brand-blue transition-colors">Halaman Utama</a>
-        <a href="profil.html" class="hover:text-brand-blue transition-colors">Profil</a>
-        <a href="kontak.html" class="hover:text-brand-blue transition-colors">Kontak</a>
+      <div class="flex items-center gap-3 font-semibold">
+        <a href="#beranda" class="hover:text-brand-blue transition-colors">Utama</a>
+        <a href="#profil" class="hover:text-brand-blue transition-colors">Profil</a>
+        <a href="#kontak" class="hover:text-brand-blue transition-colors">Kontak</a>
         <a href="https://instagram.com/rayzzfzxt_ft_morales_12" target="_blank" rel="noopener noreferrer" class="text-brand-blue hover:underline">
-          Instagram @rayzzfzxt_ft_morales_12
+          @rayzzfzxt_ft_morales_12
         </a>
       </div>
-      <div class="text-xs text-slate-400">
-        &copy; 2026 Rafael Stevan Witjaksono. All rights reserved.
+      <div class="text-slate-400">
+        &copy; 2026 Rafael Stevan Witjaksono.
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Smooth scroll and active navbar highlight on scroll
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-item');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navItems.forEach(link => {
+        link.classList.remove('nav-active-pill');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('nav-active-pill');
+        }
+      });
+    });
+
+    // Close mobile menu when a mobile nav link is clicked
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenu) mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
 </body>
 </html>
