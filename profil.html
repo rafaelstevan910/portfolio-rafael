@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Saya | RAFAEL STEVAN WITJAKSONO</title>
+  <meta name="description" content="Profil lengkap RAFAEL STEVAN WITJAKSONO - Biografi, keahlian, minat, nilai pribadi, dan visi masa depan.">
+  <link rel="icon" href="assets/images/rafael.jpg" type="image/jpeg">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0284c7',
+              sky: '#0ea5e9',
+              lightBlue: '#e0f2fe',
+              teal: '#0d9488',
+              toska: '#2dd4bf',
+              toskaLight: '#ccfbf1',
+              neon: '#22c55e',
+              lime: '#a3e635',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .active-nav {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(45, 212, 191, 0.2));
+      color: #0284c7 !important;
+      font-weight: 700;
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- ================= TOP NAVIGATION (GLASS) ================= -->
+  <header class="fixed top-4 left-0 right-0 z-50 px-4 sm:px-8 max-w-6xl mx-auto">
+    <nav class="glass-nav rounded-full px-5 py-3 flex items-center justify-between">
+      <!-- Logo / Identity -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-brand-toska shadow-sm group-hover:scale-105 transition-transform">
+          <img src="assets/images/rafael.jpg" alt="Rafael Stevan Witjaksono" class="w-full h-full object-cover">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-bold text-slate-800 text-base tracking-tight group-hover:text-brand-blue transition-colors">Portofolio Saya</span>
+          <span class="text-xs text-slate-500 font-medium">Rafael S. Witjaksono</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <div class="hidden md:flex items-center gap-2">
+        <a href="index.html" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-brand-blue hover:bg-white/60 transition-all">
+          Halaman Utama
+        </a>
+        <a href="profil.html" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-brand-blue hover:bg-white/60 transition-all">
+          Profil Saya
+        </a>
+        <a href="kontak.html" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-brand-blue hover:bg-white/60 transition-all">
+          Kontak
+        </a>
+      </div>
+
+      <!-- Action Button -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="kontak.html" class="btn-glass-primary !py-2 !px-5 text-sm">
+          <span>Hubungi Kontak Ini</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-sky-50 transition-colors" aria-label="Buka Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden mt-2 glass-card p-4 rounded-2xl flex flex-col gap-2">
+      <a href="index.html" class="nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
+        🏠 Halaman Utama
+      </a>
+      <a href="profil.html" class="nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
+        👤 Profil Saya
+      </a>
+      <a href="kontak.html" class="nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
+        ✉️ Kontak
+      </a>
+      <div class="pt-2 border-t border-slate-200/50">
+        <a href="kontak.html" class="btn-glass-primary w-full text-center justify-center text-sm">
+          Hubungi Kontak Ini
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full">
+    
+    <!-- Profile Header / Title Section -->
+    <section class="text-center py-6 sm:py-8 max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 mb-3">
+        <span class="neon-pill animate-pulse-glow">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          Informasi & Biodata Diri
+        </span>
+        <span class="neon-pill-blue neon-pill">
+          Halaman Profil
+        </span>
+      </div>
+      
+      <!-- User's Full Name (Prominently Displayed) -->
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        RAFAEL STEVAN WITJAKSONO
+      </h1>
+      
+      <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+        Pribadi yang antusias, berwawasan luas, dan berkomitmen tinggi untuk terus berkembang di bidang teknologi, kreativitas, dan kolaborasi bermakna.
+      </p>
+    </section>
+
+    <!-- Two-Column Profile Detail Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start my-6">
+      
+      <!-- Left Column: User Photo & Quick Facts Card -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+        
+        <!-- Photo Container with Glass Frame -->
+        <div class="photo-aura w-full">
+          <div class="glass-card p-4 rounded-3xl border-2 border-white/90 shadow-xl bg-white/75">
+            <div class="relative overflow-hidden rounded-2xl aspect-[3/4] shadow-md">
+              <img 
+                src="assets/images/rafael.jpg" 
+                alt="Foto RAFAEL STEVAN WITJAKSONO" 
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+              >
+              <div class="absolute top-3 right-3 bg-white/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-slate-800 shadow-sm border border-white flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                Profil Terverifikasi
+              </div>
+            </div>
+
+            <!-- Profile Identity Card snippet -->
+            <div class="mt-4 pt-3 border-t border-slate-200/60 text-center">
+              <h2 class="text-lg font-bold text-slate-900">RAFAEL STEVAN WITJAKSONO</h2>
+              <p class="text-xs text-brand-blue font-semibold mt-0.5">Kreator & Digital Enthusiast</p>
+              
+              <div class="flex justify-center items-center gap-2 mt-3">
+                <span class="neon-pill text-[11px]">Aktif & Ramah</span>
+                <span class="neon-pill-toska neon-pill text-[11px]">Siap Kolaborasi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Facts Glass Card -->
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-sky"></span>
+            Ringkasan Biodata
+          </h3>
+          <ul class="space-y-2.5 text-sm text-slate-600">
+            <li class="flex justify-between border-b border-slate-100 pb-2">
+              <span class="font-medium text-slate-500">Nama Lengkap</span>
+              <span class="font-semibold text-slate-800 text-right">Rafael Stevan Witjaksono</span>
+            </li>
+            <li class="flex justify-between border-b border-slate-100 pb-2">
+              <span class="font-medium text-slate-500">Panggilan</span>
+              <span class="font-semibold text-slate-800">Rafael</span>
+            </li>
+            <li class="flex justify-between border-b border-slate-100 pb-2">
+              <span class="font-medium text-slate-500">Instagram</span>
+              <a href="https://instagram.com/rayzzfzxt_ft_morales_12" target="_blank" class="font-semibold text-brand-blue hover:underline">
+                @rayzzfzxt_ft_morales_12
+              </a>
+            </li>
+            <li class="flex justify-between border-b border-slate-100 pb-2">
+              <span class="font-medium text-slate-500">Status</span>
+              <span class="font-semibold text-emerald-600">Terbuka Untuk Relasi</span>
+            </li>
+            <li class="flex justify-between">
+              <span class="font-medium text-slate-500">Domisili</span>
+              <span class="font-semibold text-slate-800">Indonesia</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Biography, Skills, Philosophy & Future Vision -->
+      <div class="lg:col-span-7 flex flex-col gap-6">
+        
+        <!-- Section: Tentang Saya (Semi-Formal & Easy to Understand) -->
+        <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-brand-toska"></span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+              Tentang Saya
+            </h2>
+          </div>
+          
+          <div class="text-slate-600 text-sm sm:text-base leading-relaxed space-y-3">
+            <p>
+              Salam kenal! Saya <strong class="text-slate-900 font-semibold">Rafael Stevan Witjaksono</strong>. Saya adalah pribadi yang gemar mengeksplorasi ide-ide baru, mendalami perkembangan dunia teknologi, dan merancang sesuatu yang memiliki nilai estetika serta manfaat fungsional.
+            </p>
+            <p>
+              Dalam keseharian, saya senang mengamati bagaimana teknologi dan komunikasi visual dapat mempermudah banyak aspek kehidupan. Saya percaya bahwa rasa ingin tahu yang tinggi, dipadukan dengan sikap pantang menyerah dan kemampuan beradaptasi, adalah modal utama untuk meraih pencapaian yang membanggakan.
+            </p>
+            <p>
+              Saya selalu menyambut hangat diskusi, pertukaran ide, maupun peluang kolaborasi yang positif dengan siapa pun yang memiliki visi kemajuan yang sama.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section: Keahlian & Minat (With Neon Pills) -->
+        <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-brand-sky"></span>
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                Keahlian & Minat
+              </h2>
+            </div>
+            <span class="text-xs text-teal-600 font-semibold">Kompetensi Inti</span>
+          </div>
+          
+          <p class="text-sm text-slate-600">
+            Berikut adalah beberapa bidang ketertarikan, kemampuan analitis, serta keahlian antarpribadi yang terus saya kembangkan secara konsisten:
+          </p>
+
+          <!-- Neon Pill Skill Cloud -->
+          <div class="flex flex-wrap gap-2.5 pt-1">
+            <span class="neon-pill text-sm py-1.5 px-3.5">
+              💻 Eksplorasi Web & Teknologi
+            </span>
+            <span class="neon-pill-blue neon-pill text-sm py-1.5 px-3.5">
+              🎨 Desain Bersih & Modern UI
+            </span>
+            <span class="neon-pill-toska neon-pill text-sm py-1.5 px-3.5">
+              ⚡ Pemikiran Kritis & Solutif
+            </span>
+            <span class="neon-pill text-sm py-1.5 px-3.5">
+              🤝 Kolaborasi Tim & Relasi
+            </span>
+            <span class="neon-pill-blue neon-pill text-sm py-1.5 px-3.5">
+              📱 Komunikasi Media Sosial
+            </span>
+            <span class="neon-pill-toska neon-pill text-sm py-1.5 px-3.5">
+              🚀 Cepat Belajar Hal Baru (Fast Learner)
+            </span>
+            <span class="neon-pill text-sm py-1.5 px-3.5">
+              🎯 Manajemen Waktu & Fokus
+            </span>
+            <span class="neon-pill-blue neon-pill text-sm py-1.5 px-3.5">
+              ✨ Antusiasme Inovasi
+            </span>
+          </div>
+        </div>
+
+        <!-- Section: Prinsip & Nilai Pribadi -->
+        <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+              Prinsip & Nilai Pribadi
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            
+            <div class="p-4 rounded-2xl bg-white/60 border border-sky-100 flex flex-col gap-1.5">
+              <span class="text-brand-blue font-bold text-sm flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Integritas & Kejujuran
+              </span>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Selalu mengutamakan kejujuran dan rasa tanggung jawab dalam setiap tugas yang diamanahkan.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/60 border border-teal-100 flex flex-col gap-1.5">
+              <span class="text-teal-600 font-bold text-sm flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                Growth Mindset
+              </span>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Memandang setiap tantangan dan masukan sebagai batu loncatan untuk menjadi lebih baik.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/60 border border-emerald-100 flex flex-col gap-1.5">
+              <span class="text-emerald-600 font-bold text-sm flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+                Keterbukaan & Empati
+              </span>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Menghargai keragaman sudut pandang dan selalu mendengarkan sebelum mengambil keputusan.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/60 border border-lime-100 flex flex-col gap-1.5">
+              <span class="text-lime-700 font-bold text-sm flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                Ketekunan Konsisten
+              </span>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Hasil yang hebat lahir dari kebiasaan-kebiasaan kecil yang dikerjakan secara konsisten.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="glass-card p-6 rounded-3xl border-2 border-white flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Ingin Terhubung Bersama Saya?</h4>
+            <p class="text-xs text-slate-600">Kunjungi halaman kontak atau sapa langsung via Instagram.</p>
+          </div>
+          <div class="flex items-center gap-3 flex-shrink-0">
+            <a href="kontak.html" class="btn-glass-primary !py-2.5 !px-5 text-sm">
+              Hubungi Kontak Ini
+            </a>
+            <a href="https://instagram.com/rayzzfzxt_ft_morales_12" target="_blank" rel="noopener noreferrer" class="btn-glass-secondary !py-2.5 !px-4 text-sm">
+              Instagram
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="mt-auto border-t border-slate-200/60 bg-white/60 backdrop-blur-md py-8 px-4 text-center">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-teal-400"></span>
+        <span class="font-bold text-slate-800">RAFAEL STEVAN WITJAKSONO</span>
+        <span class="text-slate-400">|</span>
+        <span>Halaman Profil</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-semibold">
+        <a href="index.html" class="hover:text-brand-blue transition-colors">Halaman Utama</a>
+        <a href="profil.html" class="hover:text-brand-blue transition-colors">Profil</a>
+        <a href="kontak.html" class="hover:text-brand-blue transition-colors">Kontak</a>
+        <a href="https://instagram.com/rayzzfzxt_ft_morales_12" target="_blank" rel="noopener noreferrer" class="text-brand-blue hover:underline">
+          Instagram @rayzzfzxt_ft_morales_12
+        </a>
+      </div>
+      <div class="text-xs text-slate-400">
+        &copy; 2026 Rafael Stevan Witjaksono. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

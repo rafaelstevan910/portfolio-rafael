@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak | Hubungi Kontak Ini - Rafael Stevan Witjaksono</title>
+  <meta name="description" content="Hubungi kontak Rafael Stevan Witjaksono melalui akun Instagram @rayzzfzxt_ft_morales_12 atau form pesan langsung.">
+  <link rel="icon" href="assets/images/rafael.jpg" type="image/jpeg">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0284c7',
+              sky: '#0ea5e9',
+              lightBlue: '#e0f2fe',
+              teal: '#0d9488',
+              toska: '#2dd4bf',
+              toskaLight: '#ccfbf1',
+              neon: '#22c55e',
+              lime: '#a3e635',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .active-nav {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(45, 212, 191, 0.2));
+      color: #0284c7 !important;
+      font-weight: 700;
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- ================= TOP NAVIGATION (GLASS) ================= -->
+  <header class="fixed top-4 left-0 right-0 z-50 px-4 sm:px-8 max-w-6xl mx-auto">
+    <nav class="glass-nav rounded-full px-5 py-3 flex items-center justify-between">
+      <!-- Logo / Identity -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-brand-toska shadow-sm group-hover:scale-105 transition-transform">
+          <img src="assets/images/rafael.jpg" alt="Rafael Stevan Witjaksono" class="w-full h-full object-cover">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-bold text-slate-800 text-base tracking-tight group-hover:text-brand-blue transition-colors">Portofolio Saya</span>
+          <span class="text-xs text-slate-500 font-medium">Rafael S. Witjaksono</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <div class="hidden md:flex items-center gap-2">
+        <a href="index.html" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-brand-blue hover:bg-white/60 transition-all">
+          Halaman Utama
+        </a>
+        <a href="profil.html" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-brand-blue hover:bg-white/60 transition-all">
+          Profil Saya
+        </a>
+        <a href="kontak.html" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-slate-600 hover:text-brand-blue hover:bg-white/60 transition-all">
+          Kontak
+        </a>
+      </div>
+
+      <!-- Action Button -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="kontak.html" class="btn-glass-primary !py-2 !px-5 text-sm">
+          <span>Hubungi Kontak Ini</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-sky-50 transition-colors" aria-label="Buka Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden mt-2 glass-card p-4 rounded-2xl flex flex-col gap-2">
+      <a href="index.html" class="nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
+        🏠 Halaman Utama
+      </a>
+      <a href="profil.html" class="nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
+        👤 Profil Saya
+      </a>
+      <a href="kontak.html" class="nav-link px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-white/70">
+        ✉️ Kontak
+      </a>
+      <div class="pt-2 border-t border-slate-200/50">
+        <a href="kontak.html" class="btn-glass-primary w-full text-center justify-center text-sm">
+          Hubungi Kontak Ini
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full">
+    
+    <!-- Title Section: "Hubungi kontak ini" -->
+    <section class="text-center py-6 sm:py-8 max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 mb-3">
+        <span class="neon-pill animate-pulse-glow">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          Respon Ramah & Terbuka
+        </span>
+        <span class="neon-pill-blue neon-pill">
+          Halaman Kontak
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        Hubungi Kontak Ini
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+        Apakah Anda memiliki pertanyaan, ide proyek menarik, atau sekadar ingin bertegur sapa dengan saya? 
+        Pintu komunikasi selalu terbuka lebar untuk Anda.
+      </p>
+    </section>
+
+    <!-- Grid: Featured Instagram Spotlight & Interactive Form -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start my-6">
+      
+      <!-- Left Column: Instagram Spotlight Card & Contact Highlights -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+        
+        <!-- INSTAGRAM SPOTLIGHT CARD (Featured with Glass & Gradient) -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border-2 border-white relative overflow-hidden group">
+          
+          <!-- Background Ambient Glow -->
+          <div class="absolute -top-12 -right-12 w-36 h-36 bg-gradient-to-br from-pink-400 to-sky-400 rounded-full blur-2xl opacity-20 -z-10 group-hover:opacity-40 transition-opacity"></div>
+
+          <div class="flex items-center justify-between mb-4">
+            <span class="neon-pill text-xs">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              Akun Resmi & Terverifikasi
+            </span>
+            <span class="text-xs font-semibold text-brand-blue bg-sky-50 px-2.5 py-1 rounded-full border border-sky-100">
+              Media Sosial Utama
+            </span>
+          </div>
+
+          <!-- Instagram Visual Header -->
+          <div class="flex items-center gap-4 py-2">
+            <!-- Instagram Icon with Multi-Color Aura -->
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-400 via-rose-500 to-purple-600 p-0.5 shadow-lg flex-shrink-0">
+              <div class="w-full h-full bg-white/95 backdrop-blur-md rounded-[14px] flex items-center justify-center">
+                <svg class="w-8 h-8 text-rose-500" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-xs text-slate-500 font-medium">Akun Instagram Resmi</p>
+              <!-- Instagram handle as requested -->
+              <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight break-all">
+                @rayzzfzxt_ft_morales_12
+              </h2>
+              <p class="text-xs text-emerald-600 font-semibold mt-0.5">● Siap menerima DM & obrolan santai</p>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
+            Anda dapat langsung mengunjungi profil Instagram saya untuk melihat aktivitas terkini, berinteraksi melalui Direct Message (DM), atau saling berteman di jejaring sosial.
+          </p>
+
+          <!-- Buttons with Glass Effect -->
+          <div class="mt-5 flex flex-col sm:flex-row gap-2.5">
+            <a 
+              href="https://instagram.com/rayzzfzxt_ft_morales_12" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-glass-primary text-center justify-center !py-2.5 !px-4 text-xs sm:text-sm"
+            >
+              <span>Buka Profil Instagram</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+
+            <button 
+              onclick="copyInstagramHandle('rayzzfzxt_ft_morales_12')" 
+              class="btn-glass-secondary justify-center !py-2.5 !px-4 text-xs sm:text-sm"
+            >
+              <svg class="w-4 h-4 text-brand-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/>
+              </svg>
+              <span>Salin Username</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Additional Contact Information Glass Cards -->
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-teal-500"></span>
+            Informasi Komunikasi
+          </h3>
+
+          <div class="space-y-3 text-xs sm:text-sm text-slate-600">
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/60 border border-slate-100">
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-brand-blue flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-slate-800">Waktu Respon Cepat</p>
+                <p class="text-slate-500 mt-0.5">Biasanya membalas pesan dalam kurun waktu 1 - 24 jam di hari kerja dan akhir pekan.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/60 border border-slate-100">
+              <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-slate-800">Gaya Berkomunikasi</p>
+                <p class="text-slate-500 mt-0.5">Semi-formal, ramah, santun, dan mudah dipahami untuk segala keperluan diskusi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Interactive Glassmorphism Contact Form -->
+      <div class="lg:col-span-7">
+        <div class="glass-card p-6 sm:p-8 rounded-3xl border-2 border-white shadow-xl space-y-5">
+          
+          <div class="space-y-1">
+            <span class="neon-pill-blue neon-pill text-xs">Formulir Pesan</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+              Kirimkan Pesan Langsung
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600">
+              Silakan isi formulir berikut. Data Anda akan diterima dengan baik dan segera dibalas.
+            </p>
+          </div>
+
+          <form id="contactForm" class="space-y-4 pt-2">
+            <!-- Nama Lengkap -->
+            <div>
+              <label for="fullName" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                Nama Lengkap Anda <span class="text-rose-500">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="fullName" 
+                name="fullName" 
+                required 
+                placeholder="Contoh: Budi Santoso"
+                class="w-full px-4 py-3 rounded-xl bg-white/80 border border-slate-200 focus:border-brand-sky focus:bg-white focus:outline-none focus:ring-4 focus:ring-sky-100 transition-all text-sm text-slate-800"
+              >
+            </div>
+
+            <!-- Email / Kontak -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Alamat Email <span class="text-rose-500">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  placeholder="nama@email.com"
+                  class="w-full px-4 py-3 rounded-xl bg-white/80 border border-slate-200 focus:border-brand-sky focus:bg-white focus:outline-none focus:ring-4 focus:ring-sky-100 transition-all text-sm text-slate-800"
+                >
+              </div>
+
+              <div>
+                <label for="phone" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  No. WhatsApp / Instagram (Opsional)
+                </label>
+                <input 
+                  type="text" 
+                  id="phone" 
+                  name="phone" 
+                  placeholder="@username atau 0812..."
+                  class="w-full px-4 py-3 rounded-xl bg-white/80 border border-slate-200 focus:border-brand-sky focus:bg-white focus:outline-none focus:ring-4 focus:ring-sky-100 transition-all text-sm text-slate-800"
+                >
+              </div>
+            </div>
+
+            <!-- Subjek -->
+            <div>
+              <label for="subject" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                Subjek Pesan <span class="text-rose-500">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                required 
+                placeholder="Topik obrolan atau ajakan kolaborasi"
+                class="w-full px-4 py-3 rounded-xl bg-white/80 border border-slate-200 focus:border-brand-sky focus:bg-white focus:outline-none focus:ring-4 focus:ring-sky-100 transition-all text-sm text-slate-800"
+              >
+            </div>
+
+            <!-- Pesan -->
+            <div>
+              <label for="message" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                Isi Pesan <span class="text-rose-500">*</span>
+              </label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="4" 
+                required 
+                placeholder="Tuliskan pesan Anda di sini secara santai dan jelas..."
+                class="w-full px-4 py-3 rounded-xl bg-white/80 border border-slate-200 focus:border-brand-sky focus:bg-white focus:outline-none focus:ring-4 focus:ring-sky-100 transition-all text-sm text-slate-800 resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button with Glass Style -->
+            <div class="pt-2">
+              <button 
+                type="submit" 
+                class="btn-glass-primary w-full text-center justify-center !py-3.5 text-base shadow-lg"
+              >
+                <span>Kirim Pesan Sekarang</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+              </button>
+            </div>
+            
+            <p class="text-center text-[11px] text-slate-500 pt-1">
+              🔒 Privasi Anda terjamin. Pesan Anda akan langsung diterima oleh Rafael.
+            </p>
+          </form>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= SUCCESS FEEDBACK MODAL (GLASS) ================= -->
+  <div id="successModal" class="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="glass-card !bg-white/95 max-w-md w-full p-6 sm:p-8 rounded-3xl border-2 border-white shadow-2xl text-center space-y-4 animate-float">
+      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-400 to-teal-500 text-white flex items-center justify-center mx-auto shadow-lg">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+
+      <div class="space-y-1">
+        <span class="neon-pill text-xs">Pesan Terkirim</span>
+        <h3 class="text-xl font-bold text-slate-900">Terima Kasih Banyak!</h3>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Pesan Anda telah berhasil kami simpan. Rafael Stevan Witjaksono akan segera menanggapi pesan Anda secepatnya.
+        </p>
+      </div>
+
+      <div class="pt-3">
+        <button id="closeModalBtn" class="btn-glass-primary w-full justify-center !py-2.5 text-sm">
+          Kembali ke Halaman Kontak
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast"></div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="mt-auto border-t border-slate-200/60 bg-white/60 backdrop-blur-md py-8 px-4 text-center">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-teal-400"></span>
+        <span class="font-bold text-slate-800">RAFAEL STEVAN WITJAKSONO</span>
+        <span class="text-slate-400">|</span>
+        <span>Halaman Kontak</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-semibold">
+        <a href="index.html" class="hover:text-brand-blue transition-colors">Halaman Utama</a>
+        <a href="profil.html" class="hover:text-brand-blue transition-colors">Profil</a>
+        <a href="kontak.html" class="hover:text-brand-blue transition-colors">Kontak</a>
+        <a href="https://instagram.com/rayzzfzxt_ft_morales_12" target="_blank" rel="noopener noreferrer" class="text-brand-blue hover:underline">
+          Instagram @rayzzfzxt_ft_morales_12
+        </a>
+      </div>
+      <div class="text-xs text-slate-400">
+        &copy; 2026 Rafael Stevan Witjaksono. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

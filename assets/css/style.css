@@ -1,0 +1,269 @@
+/* Custom Styles for Rafael Stevan Witjaksono's Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  --primary-blue: #0284c7;
+  --sky-blue: #0ea5e9;
+  --light-blue: #e0f2fe;
+  --teal-accent: #0d9488;
+  --toska-muda: #2dd4bf;
+  --toska-soft: #ccfbf1;
+  --neon-green: #22c55e;
+  --neon-lime: #a3e635;
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-shadow: 0 12px 36px -10px rgba(14, 165, 233, 0.16), 0 4px 12px -2px rgba(45, 212, 191, 0.08);
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Light Theme Animated Mesh Background */
+body {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(45, 212, 191, 0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(186, 230, 253, 0.2) 0px, transparent 60%),
+    radial-gradient(at 0% 100%, rgba(45, 212, 191, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(163, 230, 53, 0.08) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 32px -8px rgba(14, 165, 233, 0.12), 0 4px 12px -2px rgba(45, 212, 191, 0.06);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.22), 0 6px 16px -2px rgba(45, 212, 191, 0.12);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.08);
+}
+
+/* Glass Buttons with Light Blue/Toska Gradients & Glow */
+.btn-glass-primary {
+  background: linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  box-shadow: 0 8px 20px -4px rgba(14, 165, 233, 0.4), 0 4px 10px -2px rgba(20, 184, 166, 0.3);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glass-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: rotate(30deg) translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-glass-primary:hover::after {
+  transform: rotate(30deg) translateX(100%);
+}
+
+.btn-glass-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(14, 165, 233, 0.55), 0 6px 14px -2px rgba(20, 184, 166, 0.45);
+}
+
+.btn-glass-secondary {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #0369a1;
+  border: 1.5px solid rgba(14, 165, 233, 0.3);
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  box-shadow: 0 6px 16px -4px rgba(14, 165, 233, 0.12);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-glass-secondary:hover {
+  background: #ffffff;
+  border-color: #0ea5e9;
+  color: #0284c7;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(14, 165, 233, 0.25);
+}
+
+/* Neon Pill Badge */
+.neon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: rgba(163, 230, 53, 0.18);
+  border: 1px solid rgba(132, 204, 22, 0.45);
+  color: #3f6212;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.35rem 0.875rem;
+  border-radius: 9999px;
+  box-shadow: 0 0 16px rgba(163, 230, 53, 0.3);
+  letter-spacing: 0.02em;
+}
+
+.neon-pill-blue {
+  background: rgba(14, 165, 233, 0.14);
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  color: #0369a1;
+  box-shadow: 0 0 16px rgba(14, 165, 233, 0.25);
+}
+
+.neon-pill-toska {
+  background: rgba(45, 212, 191, 0.16);
+  border: 1px solid rgba(20, 184, 166, 0.4);
+  color: #0f766e;
+  box-shadow: 0 0 16px rgba(45, 212, 191, 0.28);
+}
+
+/* Glass Carousel / Slider Styles */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.slide-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slider-btn {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: #0284c7;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.slider-btn:hover {
+  background: #0ea5e9;
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.35);
+}
+
+.slider-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 9999px;
+  background: rgba(14, 165, 233, 0.25);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  width: 1.75rem;
+  background: linear-gradient(90deg, #0ea5e9, #2dd4bf);
+}
+
+/* Glowing Aura for Rafael's Image Frame */
+.photo-aura {
+  position: relative;
+}
+
+.photo-aura::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  background: linear-gradient(135deg, #38bdf8 0%, #2dd4bf 50%, #a3e635 100%);
+  border-radius: 2rem;
+  filter: blur(18px);
+  opacity: 0.45;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.photo-aura:hover::before {
+  opacity: 0.7;
+}
+
+/* Toast Notification */
+#toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+#toast.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Floating animation */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.03); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
